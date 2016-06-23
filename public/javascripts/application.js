@@ -124,4 +124,9 @@ $(document).ready(function() {
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
 
+  $( ".step-number" ).each(function(index) {
+  $( this ).append(index+1+".");
+
+});
+
 });

@@ -57,19 +57,19 @@
           {{formData | safe}}
 
           <h1 class="heading-large">
-            You cannot be a childminder
+            You can't register as a childminder
           </h1>
 
           <br>
 
           <!-- reason not eligibile: under 18 -->
           {% if data.over18=="no" %}
-            <p class="lede">You must be 18 or over to be a childminder</p>
+            <p class="lede">You must be 18 or over to be a childminder.</p>
           {% endif %}
 
           <!-- reason not eligibile: no right to work in the UK -->
           {% if data.right_to_work=="no" %}
-            <p class="lede">You have to have a right to work in the UK to be a childminder</p>
+            <p class="lede">You must have the <a class="#">right to work in the UK</a> to be a childminder.</p>
           {% endif %}
 
           <!-- reason not eligibile: has criminal record -->
@@ -90,7 +90,7 @@
           {{formData | safe}}
 
           <h1 class="heading-large">
-            You cannot be a childminder
+            You can't register as a childminder
           </h1>
 
           <br>
@@ -148,10 +148,8 @@
 
             <p class="">The cost of training and insurance depends on the providers you choose.</p>
 
-            <!--
-            <p class="lede">Read <a href="/show_rules">rules</a> when being a childminder</p>
-            <p class="lede">Check what <a href="/to_do_list">tasks</a> involved to apply</p>
-            -->
+            <p class="">Check what <a href="/to_do_list">tasks</a> involved to apply.</p>
+
 
             <br>
 
