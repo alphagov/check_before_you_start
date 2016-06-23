@@ -34,7 +34,7 @@ router.get('/', function (req, res) {
 
 router.get('/questions/eligibility/age', function (req, res) {
 
-  console.log("WHAT");
+  console.log("country");
 
   // get the answer from the query string (eg. ?over18="yes")
   var country = req.query.country;
@@ -66,7 +66,7 @@ router.get('/questions/eligibility/age', function (req, res) {
 // Question for questions/eligibility/index.html
 router.get('/questions/eligibility/right_to_work_in_uk', function (req, res) {
 
-  console.log("WHAT");
+  console.log("over18");
 
   // get the answer from the query string (eg. ?over18="yes")
   var over18 = req.query.over18;
@@ -88,7 +88,7 @@ router.get('/questions/eligibility/right_to_work_in_uk', function (req, res) {
 // Question for questions/eligibility/right_to_work_in_uk/index.html
 router.get('/questions/eligibility/criminal_history', function (req, res) {
 
-  console.log("WHAT");
+  console.log("right_to_work");
 
   // get the answer from the query string (eg. ?over18="yes")
   var right_to_work = req.query.right_to_work;
@@ -111,7 +111,7 @@ router.get('/questions/eligibility/criminal_history', function (req, res) {
 // Question for questions/eligibility/criminal_history/index.html
 router.get('/questions/will_you_be_paid', function (req, res) {
 
-  console.log("WHAT");
+  console.log("criminal_history");
 
   // get the answer from the query string (eg. ?over18="yes")
   var criminal_history = req.query.criminal_history;
@@ -133,7 +133,7 @@ router.get('/questions/will_you_be_paid', function (req, res) {
 // Question for questions/will_you_be_paid/index.html
 router.get('/questions/care_time_per_day', function (req, res) {
 
-  console.log("WHAT");
+  console.log("will_you_be_paid");
 
   // get the answer from the query string (eg. ?over18="yes")
   var will_you_be_paid = req.query.will_you_be_paid;
@@ -155,7 +155,7 @@ router.get('/questions/care_time_per_day', function (req, res) {
 // Question for questions/care_time_per_day/index.html
 router.get('/questions/related_to_child', function (req, res) {
 
-  console.log("WHAT");
+  console.log("care_time_per_day");
 
   // get the answer from the query string (eg. ?over18="yes")
   var care_time_per_day = req.query.care_time_per_day;
@@ -177,7 +177,7 @@ router.get('/questions/related_to_child', function (req, res) {
 // Question for questions/related_to_child/index.html
 router.get('/questions/child_age', function (req, res) {
 
-  console.log("WHAT");
+  console.log("related_to_child");
 
   // get the answer from the query string (eg. ?over18="yes")
   var related_to_child = req.query.related_to_child;
@@ -199,7 +199,7 @@ router.get('/questions/child_age', function (req, res) {
 // Question for questions/child_age/index.html
 router.get('/questions/number_of_children', function (req, res) {
 
-  console.log("WHAT");
+  console.log("child_age");
 
   // get the answer from the query string (eg. ?over18="yes")
   var child_age = req.query.child_age;
@@ -222,7 +222,7 @@ router.get('/questions/number_of_children', function (req, res) {
 
 router.get('/questions/result', function (req, res) {
 
-  console.log("WHAT");
+  console.log("domestic_premises");
 
   // get the answer from the query string (eg. ?scaffolding=1)
   var domestic_premises = req.query.domestic_premises;

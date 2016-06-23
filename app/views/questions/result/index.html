@@ -117,9 +117,7 @@
         <!-- eligible -->
         {% elif 
           data.child_age=="5_or_under" or
-          data.child_age=="6_to_7" and
-          data.will_you_be_paid=="yes" and
-          data.care_time_per_day=="more_than_two_hours"
+          data.child_age=="6_to_7"
         %}
 
             <form method="get" action="/to_do_list" class="form">
@@ -131,17 +129,50 @@
             </h1>
 
             <br>
+            
+            <!--  Early Years Register AND Childcare Register (£35) + first add training (£216.00) + DBS Check fee (£44)  -->
+            {% if data.child_age=="5_or_under" and
+                  data.child_age=="6_to_7" 
+            %}
+              <p class="">The cost of applying is <span class="bold">£79</span> plus training and insurance</p>
 
-          <!-- reason not eligibile: prison -->
-          {% if data.number_of_children | int > 5 %}
-            <p class="lede">You must</p>
-          {% endif %}
+            <!-- Early Years Register AND Childcare Register (£35) + DBS Check fee (£44) -->
+            {% elif data.child_age=="5_or_under" %}
+              <p class="">The cost of applying is <span class="bold">£79</span> excluding training and insurance.</p>
+
+            {% elif data.child_age=="6_to_7" %}
+              <!--  Childcare Register (£103) + DBS Check fee (£44) -->
+              <p class="">The cost of applying is <span class="bold">£147</span> plus training and insurance.</p>
+
+            {% endif %}
+
+            <p class="">The cost of training and insurance depends on the providers you choose.</p>
+
+            <!--
+            <p class="lede">Read <a href="/show_rules">rules</a> when being a childminder</p>
+            <p class="lede">Check what <a href="/to_do_list">tasks</a> involved to apply</p>
+            -->
+
+            <br>
+
+            <div class="form-group">
+              <input type="submit" class="button button-start" value="Apply now"/>
+            </div>
+
+        {% endif %}
 
 
-            <!-- application fee calculator -->
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}
+
+            <!-- application fee calculator 
             <p class="lede">The cost of applying is <span class="bold">£<span id="cost"></span></span></p>
             
-            <!-- application fee calculator -->
             <script>
 
               var query = location.search.substr(1);
@@ -172,23 +203,4 @@
               document.getElementById('cost').innerHTML = costToPay
 
             </script>
-
-            <p class="lede">Check <a href="/show_rules">rules</a> when being a childminder</p>
-            <p class="lede">Check what <a href="/to_do_list">tasks</a> involved to apply</p>
-
-            <br>
-
-            <div class="form-group">
-              <input type="submit" class="button button-start" value="Apply now"/>
-            </div>
-
-        {% endif %}
-
-
-      </form>
-
-    </div>
-  </div>
-
-</main>
-{% endblock %}
+            -->
