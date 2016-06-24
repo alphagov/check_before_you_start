@@ -1830,7 +1830,7 @@ input[type=number] {
 }
 
 .phase-banner-alpha .phase-tag {
-  background-color: #0b0c0c;
+  background-color: #0b0c0c !important;
 }
 
 .phase-banner-beta {

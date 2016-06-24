@@ -6,7 +6,7 @@
   @include phase-banner($state: alpha);
 
   .phase-tag {
-	  background-color: $black;	
+	  background-color: $black !important;	
   }
   
 }
