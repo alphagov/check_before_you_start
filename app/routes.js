@@ -218,28 +218,4 @@ router.get('/questions/number_of_children', function (req, res) {
 
 });
 
-// Question for qustions/domestic_premises/index.html
-
-router.get('/questions/result', function (req, res) {
-
-  console.log("domestic_premises");
-
-  // get the answer from the query string (eg. ?scaffolding=1)
-  var domestic_premises = req.query.domestic_premises;
-  var shared_home = req.query.shared_home;
-
-  if (domestic_premises == "yes" && shared_home==undefined){
-
-    // if users IS using scaffolding
-    res.redirect("/questions/domestic_premises/shared_home" + res.locals.formQuery);
-
-} else {
-
-    // if users is NOT using scaffolding
-    res.render('questions/result/index.html');
-
-  }
-
-});
-
 module.exports = router;

@@ -116,6 +116,9 @@
 
         <!-- eligible -->
         {% elif 
+          data.over18=="yes" or
+          data.right_to_work=="yes" or
+          data.criminal_history=="you" or
           data.child_age=="5_or_under" or
           data.child_age=="6_to_7"
         %}
@@ -138,6 +141,7 @@
 
             <!-- Early Years Register AND Childcare Register (£35) + DBS Check fee (£44) -->
             {% elif data.child_age=="5_or_under" %}
+              
               <p class="">The cost of applying is <span class="bold">£79</span> excluding training and insurance.</p>
 
             {% elif data.child_age=="6_to_7" %}
