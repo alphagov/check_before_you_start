@@ -6815,3 +6815,9 @@ em.search-result-highlighted-text {
 .pattern-divider {
     margin-top: 12px;
 }
+
+
+// Lets override the phase banner and make it black
+.phase-banner-alpha .phase-tag {
+ background: black !important;
+}
