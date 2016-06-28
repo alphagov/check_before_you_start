@@ -134,26 +134,32 @@
             <br>
             
             <!--  Early Years Register AND Childcare Register (£35) + first add training (£216.00) + DBS Check fee (£44)  -->
-            {% if data.child_age=="5_or_under" and
-                  data.child_age=="6_to_7" 
-            %}
-              <p class="">The cost of applying is <span class="bold">£79</span> plus training and insurance</p>
+            {% if data.child_age=="5_or_under,6_to_7" %}
+
+              <p>The cost of applying is <span class="bold">£79</span> plus training and insurance. The cost of training and insurance depends on the providers you choose.</p>
 
             <!-- Early Years Register AND Childcare Register (£35) + DBS Check fee (£44) -->
             {% elif data.child_age=="5_or_under" %}
               
-              <p class="">The cost of applying is <span class="bold">£79</span> excluding training and insurance.</p>
+              <p class="">The cost of applying is <span class="bold">£79</span> plus training and insurance. The cost of training and insurance depends on the providers you choose.</p>
 
             {% elif data.child_age=="6_to_7" %}
               <!--  Childcare Register (£103) + DBS Check fee (£44) -->
-              <p class="">The cost of applying is <span class="bold">£147</span> plus training and insurance.</p>
+              <p class="">The cost of applying is <span class="bold">£147</span> plus training and insurance. The cost of training and insurance depends on the providers you choose.</p>
 
             {% endif %}
 
-            <p class="">The cost of training and insurance depends on the providers you choose.</p>
+            <!-- Waiting time if in child's or carers home -->
+            {% if data.place_type=="childs_home" or
+                  data.place_type=="carers_home"
+            %}
+                <p>The time to become a childminder is <span class="bold">16-20 weeks</span> plus training. The time to train depends on the providers you choose.</p>                     
+            <!-- Waiting time in nurseries, after school clubs or holiday playscheme -->
+            {% elif data.place_type=="other" %}
+                <p>The time to become a childminder is <span class="bold">28-32 weeks</span> plus training. The time to train depends on the providers you choose.</p>
+            {% endif %} 
 
             <p class="">Check what <a href="/to_do_list">tasks</a> involved to apply.</p>
-
 
             <br>
 
@@ -193,6 +199,8 @@
               if(data.rifles = 'yes'){
                 costToPay += 88
               }
+
+              {{data.child_age}}
 
               if(typeof data.number_of_visitors !== 'undefined'){
                 number_of_visitors = parseInt(data.number_of_visitors)

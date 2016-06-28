@@ -1,14 +1,8 @@
 // Phase banners
 // ==========================================================================
 
-
 .phase-banner-alpha {
   @include phase-banner($state: alpha);
-
-  .phase-tag {
-	  background-color: $black !important;	
-  }
-  
 }
 
 .phase-banner-beta {
