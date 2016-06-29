@@ -6,12 +6,12 @@
     <div class="column-two-thirds">
 
         <!-- service not available in these countries -->
-        {% if 
+        {% if
           data.country=="northern_ireland" or
           data.country=="scotland" or
           data.country=="wales"
         %}
-          
+
           <!-- Northern Ireland -->
           {% if data.country=="northern_ireland" %}
             <h1 class="heading-large">
@@ -22,7 +22,7 @@
 
             <p class="lede">Use a different <a href="https://www.gov.uk/register-as-childminder-northern-ireland">service</a> to apply to be a childminder in Northern Ireland</p>
           {% endif %}
-          
+
           <!-- Scotland -->
           {% if data.country=="scotland" %}
             <h1 class="heading-large">
@@ -46,7 +46,7 @@
           {% endif %}
 
         <!-- not eligible -->
-        {% elif 
+        {% elif
           data.over18=="no" or
           data.right_to_work=="no" or
           data.criminal_history=="yes"
@@ -78,11 +78,11 @@
           {% endif %}
 
         <!-- no licence needed -->
-        {% elif 
+        {% elif
           data.will_you_be_paid=="no" or
           data.care_time_per_day=="less_than_two_hours" or
           data.related_to_child=="yes" or
-          data.child_age=="8_and_over" 
+          data.child_age=="8_and_over"
         %}
 
           <form method="get" action="#" class="form">
@@ -94,7 +94,7 @@
           </h1>
 
           <br>
-          
+
           <!-- reason not eligibile: related to child -->
           {% if data.will_you_be_paid=="no" %}
             <p class="lede">If you're not being paid, can't be a childminder.</p>
@@ -112,10 +112,10 @@
 
           {% if data.child_age=="8_and_over" %}
             <p class="lede">To look after children 8 and older, you don't need to be a childminder.</p>
-          {% endif %}               
+          {% endif %}
 
         <!-- eligible -->
-        {% elif 
+        {% elif
           data.over18=="yes" or
           data.right_to_work=="yes" or
           data.criminal_history=="you" or
@@ -132,7 +132,7 @@
             </h1>
 
             <br>
-            
+
             <!--  Early Years Register AND Childcare Register (£35) + first add training (£216.00) + DBS Check fee (£44)  -->
             {% if data.child_age=="5_or_under,6_to_7" %}
 
@@ -140,7 +140,7 @@
 
             <!-- Early Years Register AND Childcare Register (£35) + DBS Check fee (£44) -->
             {% elif data.child_age=="5_or_under" %}
-              
+
               <p class="">The cost of applying is <span class="bold">£79</span> plus training and insurance. The cost of training and insurance depends on the providers you choose.</p>
 
             {% elif data.child_age=="6_to_7" %}
@@ -153,11 +153,11 @@
             {% if data.place_type=="childs_home" or
                   data.place_type=="carers_home"
             %}
-                <p>The time to become a childminder is <span class="bold">16-20 weeks</span> plus training. The time to train depends on the providers you choose.</p>                     
+                <p>The time to become a childminder is <span class="bold">16-20 weeks</span> plus training. The time to train depends on the providers you choose.</p>
             <!-- Waiting time in nurseries, after school clubs or holiday playscheme -->
             {% elif data.place_type=="other" %}
                 <p>The time to become a childminder is <span class="bold">28-32 weeks</span> plus training. The time to train depends on the providers you choose.</p>
-            {% endif %} 
+            {% endif %}
 
             <p class="">Check what <a href="/to_do_list">tasks</a> involved to apply.</p>
 
@@ -178,9 +178,9 @@
 </main>
 {% endblock %}
 
-            <!-- application fee calculator 
+            <!-- application fee calculator
             <p class="lede">The cost of applying is <span class="bold">£<span id="cost"></span></span></p>
-            
+
             <script>
 
               var query = location.search.substr(1);
