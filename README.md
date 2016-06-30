@@ -19,3 +19,8 @@ You may get calls from users asking:
 - [which forms they might need]
 - [what information do they put in a form]
 
+You might be processing applications from users who:
+
+- [don't need to apply]
+- [aren't ready to apply]
+- [aren't eligible]
