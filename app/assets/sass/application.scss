@@ -43,6 +43,11 @@
   background: black !important;
 }
 
+// Let's override the phase banner and make it black
+.phase-banner-beta .phase-tag {
+  background: #D53880 !important;
+}
+
 .bold {
   font-weight: 700;
 }
