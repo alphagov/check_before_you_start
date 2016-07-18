@@ -48,7 +48,7 @@ Features you might want to replace could include:
 
 ## 4. Try an example of this pattern
 
-You can try an example of a [check before you start prototype](https://check-before-you-start.herokuapp.com/)
+You can try an example of a [check before you start prototype](https://check-before-you-start.herokuapp.com/start-page)
 
 To prevent the public stumbling across the prototype and thinking it's gov.uk, we given the link a username and password:
 

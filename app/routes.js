@@ -34,7 +34,7 @@ router.get('/', function (req, res) {
 
 router.get('/questions/eligibility/age', function (req, res) {
 
-  console.log("country");
+  console.log("i love you princess");
 
   // get the answer from the query string (eg. ?over18="yes")
   var country = req.query.country;
