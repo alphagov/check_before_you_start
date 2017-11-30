@@ -74,7 +74,7 @@
 
           <!-- reason not eligibile: has criminal record -->
           {% if data.criminal_history=="yes" %}
-            <p class="lede">Having a criminal record makes you not eligible to a childminder</p>
+            <p class="lede">Having a criminal record makes you not eligible to be a childminder</p>
           {% endif %}
 
         <!-- no licence needed -->
@@ -97,12 +97,12 @@
 
           <!-- reason not eligibile: related to child -->
           {% if data.will_you_be_paid=="no" %}
-            <p class="lede">If you're not being paid, can't be a childminder.</p>
+            <p class="lede">If you're not being paid, you can't be a childminder.</p>
           {% endif %}
 
           <!-- reason not eligibile: less than two hours a day -->
           {% if data.care_time_per_day=="less_than_two_hours" %}
-            <p class="lede">You have look after children for 2 or more hours a day to be a childminder.</p>
+            <p class="lede">You have to look after children for 2 or more hours a day to be a childminder.</p>
           {% endif %}
 
           <!-- reason not eligibile: related to child -->
